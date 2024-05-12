@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konverter Celcius ke Fahrenheit</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    input {
+        padding: 8px;
+        margin: 5px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h2>Konverter Celcius ke Fahrenheit</h2>
+
+<input type="number" id="inputCelcius" placeholder="Masukkan suhu dalam Celcius">
+<button onclick="konversi()">Konversi</button>
+
+<p id="hasil"></p>
+
+<script>
+function konversi() {
+    var inputCelcius = document.getElementById("inputCelcius").value;
+    var hasil = (inputCelcius * 9/5) + 32;
+    document.getElementById("hasil").innerHTML = inputCelcius + " Celcius = " + hasil + " Fahrenheit";
+}
+</script>
+
+</body>
+</html>
